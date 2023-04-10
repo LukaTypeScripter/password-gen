@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&family=Plus+Jakarta+Sans:wght@400;800&display=swap');
+*,*::before,*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --background-linear: #14131B;
+  --graysh-header: #817D92;
+  --Dark-grey: #24232C;
+  --almost-white: #E6E5EA;
+  --yellow-difficulty:#F8CD65;
+  --red-tooweak:#F64A4A;
+  --orange-weak:#FB7C58;
+  --neonGreen-strong:#A4FFAF;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  background-color: var(--background-linear);
+  font-family: 'JetBrains Mono', monospace;
+}
+#header-text {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  margin-top: 64px;
+  text-align: center;
+  color: var(--graysh-header);
+}
+
+/* password clipboard cont */
+
+.clipboard-cont {
+  display: flex;
+  flex-direction: column;
+  width: 343px;
+  background-color: var(--Dark-grey);
+  margin-top: 16px;
+}
+.password-text {
+  display: flex;
+  margin-top: 17px;
+  margin-left: 16px;
+  margin-bottom: 15px;
+  justify-content: space-between;
+}
+
+
+/*clipboard img*/
+
+#clip {
+  height: 20px;
+width: 17.5px;
+margin-right: 22px;
+}
+
+/*password gen h1*/
+
+#password {
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 32px;
+color: var(--almost-white);
+
+}
+
+/*character length cont*/
+
