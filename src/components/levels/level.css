@@ -1,0 +1,36 @@
+
+.levels-cont {
+    display: flex;
+    column-gap: 7.5px;
+    position: relative;
+    right: 20px;
+  }
+
+
+.level {
+    width: 10px;
+  height: 28px;
+  border: 2px solid #E6E5EA;
+}
+.level.too-weak {
+    background-color: var(--red-tooweak);
+    border: none;
+}
+.level.weak {
+    background-color: var(--orange-weak);
+    border: none;
+}
+.level.medium {
+    background-color: var(--yellow-difficulty);
+    border: none;
+}
+.level.strong {
+    border: none;
+    background-color: var(--neonGreen-strong);
+}
+@media only screen and (min-width: 768px) {
+   .levels-cont {
+    position: relative;
+    right: 90px;
+   }
+  }

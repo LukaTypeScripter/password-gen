@@ -14,6 +14,9 @@
   --red-tooweak:#F64A4A;
   --orange-weak:#FB7C58;
   --neonGreen-strong:#A4FFAF;
+  --range: calc(var(--max) - var(--min));
+  --ratio: calc((var(--value) - var(--min)) / var(--range));
+  --sx: calc(0.5 * 2em + var(--ratio) * (100% - 2em));
 }
 
 body {
@@ -133,16 +136,18 @@ margin-left: 16px;
 margin-right: 32px;
   
 } 
- input[type="range"] {
+input[type="range"] {
+ 
   -webkit-appearance: none;
   background: var(--background-linear);
   accent-color: white;
   cursor: pointer;
   height: 8px;
   background-image: linear-gradient(var(--neonGreen-strong),var(--neonGreen-strong));
-  background-size: 30% 100%;
+  background-size: calc(var(--sx) * 100%) 100%;
   background-repeat: no-repeat;
- }
+}
+ 
 input[type="range"]::-webkit-slider-thumb {
   height: 28px;
   width: 28px;
@@ -150,12 +155,12 @@ input[type="range"]::-webkit-slider-thumb {
   border-radius: 14px;
   background: var(--almost-white);
 }
+ 
 input[type="range"]:hover::-webkit-slider-thumb {
   background: var(--background-linear);
   border: 2px solid var(--neonGreen-strong);
   -webkit-appearance: none;
 }
-
 input[type="radio"] {
   appearance: none;
   -webkit-appearance: none;
@@ -167,6 +172,7 @@ input[type="radio"] {
 }
 input[type="radio"]:checked {
   background-color: var(--neonGreen-strong);
+  content: url(./images/icon-check.svg);
 }
 .first-checkbox,.second-checkbox,.third-checkbox,.forth-checkbox {
   display: flex;
@@ -238,7 +244,7 @@ line-height: 21px;
     margin-left: 32px;
   }
   .difficulties {
-    column-gap: 159px;
+    column-gap: 116px;
   }
   .btn {
     width: 476px;
@@ -254,15 +260,21 @@ line-height: 21px;
 svg {
   margin-top: 3px;
 }
-.weak {
-  background-color: red;
+
+
+.square-cont {
+  display: flex;
+  column-gap: 7.5px;
+  margin-left: 16px;
 }
-.too-weak {
-  background-color: green;
+@media only screen and (min-width: 768px) {
+  .square-cont {
+    margin-left: 116px;
+  }
 }
-.medium {
-  background-color: orange;
-}
-.strong {
-  background-color: blue;
-}
+
+
+/**squeres logic to change colors **/
+
+
+
